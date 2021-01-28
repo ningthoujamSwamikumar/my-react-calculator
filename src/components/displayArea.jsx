@@ -7,7 +7,7 @@ export default function DisplayArea(props) {
         {props.input1}
       </div>
       <div name="opAndOpnd2" value={props.input23} className="innerDisplay">
-        {props.input23[0]} {props.input23[1]}
+        {props.input23[0]==="*" ? "x" : props.input23[0]} {props.input23[1]}
       </div>
       <div name="result" value={props.output} className="innerDisplay">
         {props.output !== "" && "="} {props.output}

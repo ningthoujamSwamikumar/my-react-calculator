@@ -9,6 +9,13 @@ export default function App() {
   const [op, setOp] = useState("");
   const [opnd2, setOpnd2] = useState("");
   const [result, setResult] = useState("");
+  const [{prevResult, newOp}, addNewOperation ] = useState({prevResult:"", newOp:""});
+  // console.log("opnd1:"+opnd1+", op"+op+", opnd2:"+opnd2+", result:"+result+", prevResult:"+prevResult+", newOp:"+newOp);
+  if(newOp){
+    setOpnd1(prevResult);
+    setOp(newOp);
+    addNewOperation({prevResult:"", newOp:""});
+  }
 
   function takeNumInput(input) {
     if (op === "") {
@@ -24,17 +31,21 @@ export default function App() {
     }
   }
 
-  function takeOpInput(input) {
+  function takeOpInput(opInput) {
     if (opnd1 === "") {
-      input === "-" && takeNumInput(input);
+      opInput === "-" && takeNumInput(opInput);
     } else if (op === "") {
-      setOp(() => {
-        return input === "*" ? "x" : input;
-      });
-    } else if (input === "=") {
+      setOp(opInput);
+    }else if(opnd2 ===""){
+      opInput === "-" && takeNumInput(opInput);
+    } else if (result==="" && opInput === "=") {
       setResult(() => {
         return calculate(opnd1, op, opnd2);
       });
+    }
+    else if(result!=="" && opInput !=="="){
+      delInput("AC");
+      addNewOperation({prevResult:result, newOp:opInput});
     }
   }
 
@@ -44,6 +55,7 @@ export default function App() {
       setOp("");
       setOpnd2("");
       setResult("");
+      addNewOperation({prevResult:"", newOp:""});
     } else if (input === "DEL") {
       if (op === "") {
         setOpnd1((prevValue) => {

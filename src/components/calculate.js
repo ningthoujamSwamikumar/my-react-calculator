@@ -6,7 +6,7 @@ export default function calculate(num1, op, num2) {
       return num1 + num2;
     case "-":
       return num1 - num2;
-    case "x":
+    case "*":
       return num1 * num2;
     case "/":
       return num1 / num2;
