@@ -22,7 +22,7 @@ export default function App() {
       setOpnd1((prevValue) => {
         return prevValue + input;
       });
-    } else if (op !== "") {
+    } else if (op !== "" && result === "") {
       setOpnd2((prevValue) => {
         return prevValue + input;
       });
