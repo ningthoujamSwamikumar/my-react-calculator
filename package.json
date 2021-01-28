@@ -1,5 +1,4 @@
 {
-  "homepage":"https://nswamikumar.github.io/my-react-calculator/",
   "name": "my-react-calculator",
   "version": "0.1.0",
   "private": true,
@@ -19,6 +18,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+
   },
   "eslintConfig": {
     "extends": [
