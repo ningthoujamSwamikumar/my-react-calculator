@@ -3,7 +3,7 @@ html {
 }
 body {
   height: 100vh;
-  background-color: #75bd8c;
+  background-color: #bfb9df;
   margin-top: 0;
 }
 #root {
@@ -42,7 +42,7 @@ button {
   text-align: center;
   outline: none;
   color: #fff;
-  background-color: #4caf50;
+  background-color: #6557b2;
   border: none;
   /*box-shadow: 0 9px #999;*/
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -51,14 +51,14 @@ button {
   width: 48%;
 }
 button.functionBtn {
-  background-color: #59886b;
+  background-color: #2d2754;
 }
 button.functionBtn:hover {
-  background-color: #556052;
+  background-color: #16132a;
 }
 
 button:hover {
-  background-color: #3e8e41;
+  background-color: #4b3f8d;
 }
 
 button:active {
@@ -70,7 +70,7 @@ button:active {
 .display {
   width: 82%;
   height: 30%;
-  background-color: #d6ebdc;
+  background-color: #e5e2f3;
   margin: 0 9% 2% 9%;
   font-size: 1.5em;
   font-weight: 400;
